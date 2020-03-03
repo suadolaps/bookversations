@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+
+    {% load static %}
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+</head>
+<body>
+    <header>
+      <nav class="nav-bar" id="nav-bar">
+        <a id="page-title" href="#">Bookversations</a>
+        <div class="menu-right" id="menu-right">
+            <a href="#"
+              >Episodes</a
+            >
+            <a class="nav-menu" href="#">Reading List</a>
+            <a class="nav-menu" href="#">Subscribe</a>
+            <a class="nav-menu" href="#">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="section-season">
+        <h2 class="season-heading">Season 1</h2>
+
+            <div class="episode-wrapper">
+            <div class="image-container">
+              <img
+                class="podcast-cover"
+                width="120"
+                height="120"
+                src="https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/production/podcast_uploaded_nologo400/778886/778886-1535912018248-f0180f7a3dd61.jpg"
+                alt="Bookversation episode on Anthills of the Savannah"
+              />
+               <audio controls class="episode-audio">
+                <source src="/audio/anthills-audio.mp3" type="audio/mp3" />
+              </audio>
+            </div>
+
+             <div class="episode-content">
+                <h4 class="episode-title">Anthills of the Savannah</h4>
+                <p>In this episode, we discuss Chinua Achebe's novel 'Anthills of
+                the Savannah' focusing on what the role of a writer should be in
+                society. We also talk about the role of women and the importance
+                  of our involvement in all facets of society.</p>
+              </div>
+            </div>
+      </section>
+
+       <section class="section-season">
+        <h2 class="season-heading">Season 2</h2>
+
+          <div class="section-container">
+            <h3 class="large-heading">Coming Soon</h3>
+            <p class="large-body">
+              Check out our reading list and vote for books you'd like us to talk about in Season 2. Can't find a book you believe deserves a conversation? Send us your recommendation!
+            </p>
+          </div>
+      </section>
+
+      <section class="section-hosts">
+        <h2 class="season-heading">Your Hosts</h2>
+        <div class="hosts-container">
+          <div class="hosts-wrapper">
+            <div class="host-profile-1">
+                <img
+                  src="https://media-exp1.licdn.com/dms/image/C5603AQFTp47avdDwsA/profile-displayphoto-shrink_200_200/0?e=1588809600&v=beta&t=S5TdBs0kwvtyuJH0tiYrf_FJIAIBb9ruYQumuKlkgb0"
+                  alt="Host Suad"
+                  class="host-image"
+                />
+
+                <div class="host-bio">
+                  <h4 class="host-name">Suad Kamardeen</h4>
+                <p class="host-body-text">
+                  Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
+                </p>
+              </div>
+              </div>
+
+              <div class="host-profile-2">
+              <img
+                   src="https://media-exp1.licdn.com/dms/image/C4E03AQGuXHoONfMYPA/profile-displayphoto-shrink_200_200/0?e=1588809600&v=beta&t=V1eRybtn67Bqte8fzvzenI2M7Pkg-kvqnLoEY9wv_zg"
+                   alt="Host Mahmoudat"
+                  class="host-image"
+                   >
+                <div class="host-bio">
+                  <h4 class="host-name">Mahmoudat Sanni-Oba</h4>
+                <p class="host-body-text">
+
+An accounting and finance graduate from LSE and the creator of <a href="https://myrihla.com/" target="_blank">myrihla</a>. She was featured in the Future Leader Magazine by Powerful Media 2016 and in 2017 she was voted Top Ten in The Tab’s 100 women to watch list. Mahmoudat is an aspiring author and  researcher who is passionate about using literature to facilitate important conversations in society.
+                </p>
+                </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-reading-list">
+
+      </section>
+
+      <section class="section-signup-form">
+        <form action="/" class="form-signup" method="POST">
+          <div class="footer-image">
+            <img
+            class="footer-logo"
+            src="https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/production/podcast_uploaded_nologo400/778886/778886-1535912018248-f0180f7a3dd61.jpg"
+            alt="logo"
+
+          />
+          </div>
+          <h2 class="newsletter-heading">Sign-up to Our Newsletter!</h2>
+
+         <div class="form-input">
+            <input
+            type="text"
+            class="form-control top"
+            name="fName"
+            placeholder="First Name"
+            required
+            autofocus
+          />
+
+          <input
+            type="text"
+            class="form-control middle"
+            name="lName"
+            placeholder="Last Name"
+            required
+          />
+
+          <input
+            type="email"
+            class="form-control bottom"
+            name="email"
+            placeholder="Email address"
+            required
+          />
+          </div>
+
+          <button class="sign-up-button" type="submit">
+            Sign up
+          </button>
+          <p class="copyright-text">&copy; Bookversations 2020</p>
+        </form>
+      </section>
+
+  </main>
+
+      <footer class="footer">
+      <div class="container">
+        <span class="footer-text">Place footer content here.</span>
+      </div>
+    </footer>
+  </body>
+</html>
