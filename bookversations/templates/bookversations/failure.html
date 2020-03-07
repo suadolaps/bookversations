@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link href="{% static 'bookversations/css/styles.css' %}" rel="stylesheet" type="text/css"/>
+    <title>Success</title>
+</head>
+<body>
+  <div class="main">
+    <div class="section-container">
+      <h1 class="large-heading">Uh oh!</h1>
+      <p class="large-body">
+        There was a problem with signing you up. Please try again or contact
+        the developer.
+      </p>
+
+      <form action="/failure" method="POST">
+        <button class="sign-up-button" type="submit" name="button">
+          Try Again
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

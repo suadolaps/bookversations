@@ -10,18 +10,18 @@
     <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
 
     {% load static %}
-    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    <link href="{% static 'bookversations/css/styles.css' %}" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <header>
       <nav class="nav-bar" id="nav-bar">
         <a id="page-title" href="#">Bookversations</a>
         <div class="menu-right" id="menu-right">
-            <a href="#"
+            <a href="#episodes"
               >Episodes</a
             >
-            <a class="nav-menu" href="#">Reading List</a>
-            <a class="nav-menu" href="#">Subscribe</a>
+            <a class="nav-menu" href="#reading-list">Reading List</a>
+            <a class="nav-menu" href="#subscribe">Subscribe</a>
             <a class="nav-menu" href="#">Contact</a>
         </div>
       </nav>
@@ -29,9 +29,9 @@
 
     <main class="main">
       <section class="section-season">
-        <h2 class="season-heading">Season 1</h2>
+        <h2 class="season-heading" id="episodes">Season 1</h2>
 
-            <div class="episode-wrapper">
+          <div class="episode-wrapper">
             <div class="image-container">
               <img
                 class="podcast-cover"
@@ -51,8 +51,8 @@
                 the Savannah' focusing on what the role of a writer should be in
                 society. We also talk about the role of women and the importance
                   of our involvement in all facets of society.</p>
-              </div>
-            </div>
+             </div>
+          </div>
       </section>
 
        <section class="section-season">
@@ -103,12 +103,27 @@ An accounting and finance graduate from LSE and the creator of <a href="https://
         </div>
       </section>
 
-      <section class="section-reading-list">
+       <section class="section-reading-list" id="reading-list">
+        <h2 class="season-heading">Reading List</h2>
 
+           {% if reading_list %}
+
+
+        <ul class="book">
+            {% for book in reading_list %}
+                <li>
+                    <div class="book-image"><img src="{{ book.book_image.url }}" alt="{{ book.book_title }}"></div>
+                    <div class="book-title"><h4>{{ book.book_title}}</h4></div>
+                    <div class="book-blurb"><p>{{ book.book_blurb }}<p></div>
+                </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
       </section>
 
-      <section class="section-signup-form">
-        <form action="/" class="form-signup" method="POST">
+      <section class="section-signup-form" id="subscribe">
+        <form action = "{% url 'bookversations:subscribe' %}" class="form-signup" method="POST">
+         {% csrf_token %}
           <div class="footer-image">
             <img
             class="footer-logo"
