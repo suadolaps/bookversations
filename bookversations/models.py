@@ -11,11 +11,11 @@ class ReadingList(models.Model):
         return self.book_title
 
 
-class Subscribe(models.Model):
-    first_name = models.CharField(max_length=100, blank=True)
+class NewsletterUser(models.Model):
+    first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100, blank=True)
-    email = models.EmailField(null=True, blank=True)
-    timestamp = models.DateTimeField(auto_now_add=True)
+    email = models.EmailField()
+    date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.email

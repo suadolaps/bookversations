@@ -1,11 +1,12 @@
 from django.urls import path
+from django.conf.urls import url
 
 from . import views
 
 app_name = 'bookversations'
 urlpatterns = [
     path('', views.index, name='index'),
-    path(r'subscribe/', views.subscribe, name='subscribe'),
+    url(r'subscribe/$', views.newsletter_signup, name='subscribe'),
 
 ]
 

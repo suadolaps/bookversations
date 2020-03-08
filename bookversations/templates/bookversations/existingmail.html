@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    {% load static %}
-    <link href="{% static 'bookversations/css/styles.css' %}" rel="stylesheet" type="text/css"/>
-    <title>Failure</title>
+
+      {% load static %}
+      <link href="{% static 'bookversations/css/styles.css' %}" rel="stylesheet" type="text/css"/>
+    <title>Email Exists</title>
 </head>
 <body>
   <div class="main">
     <div class="section-container">
       <h1 class="large-heading">Uh oh!</h1>
       <p class="large-body">
-        There was a problem with signing you up. Please try again or contact
-        the developer.
+        Sorry this email already exists in our system. Click the button below to try again with a different email.
       </p>
 
-      <form action="/failure" method="POST">
-              {% csrf_token %}
+      <form action="{% url 'bookversations:existingmail' %}" method="post">
+            {% csrf_token %}
         <button class="sign-up-button" type="submit" name="button">
           Try Again
         </button>

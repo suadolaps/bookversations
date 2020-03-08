@@ -15,6 +15,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+MAILCHIMP_LOGIN = os.environ.get('MAILCHIMP_LOGIN')
 MAILCHIMP_API_KEY = os.environ.get('MAILCHIMP_API_KEY')
 MAILCHIMP_EMAIL_LIST_ID = os.environ.get('MAILCHIMP_EMAIL_LIST_ID')
 MAILCHIMP_DATA_CENTER = os.environ.get('MAILCHIMP_DATA_CENTER')
@@ -43,8 +44,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'projects.urls'
 
-MEDIA_ROOT=os.path.join(BASE_DIR, 'media/')
-MEDIA_URL="/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_URL = "/media/"
 
 TEMPLATES = [
     {
