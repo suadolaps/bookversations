@@ -8,7 +8,7 @@ class NewsletterUserSignUpForm(forms.ModelForm):
         model = NewsletterUser
         fields = ['first_name', 'last_name', 'email']
 
-        def clean_email(self):
+        def clean_data(self):
             email = self.cleaned_data.get('email')
             fname = self.cleaned_data.get('first_name')
             lname = self.cleaned_data.get('last_name')
