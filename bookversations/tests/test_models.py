@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from projects.bookversations.models import NewsletterUser
+from ..models import NewsletterUser
 
 
 class UserModelTest(TestCase):
@@ -18,4 +18,3 @@ class UserModelTest(TestCase):
         user = NewsletterUser.objects.get(id=1)
         max_length = user._meta.get_field('first_name').max_length
         self.assertEquals(max_length, 100)
-

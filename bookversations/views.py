@@ -25,8 +25,8 @@ def newsletter_signup(request):
             return render(request, 'bookversations/existingmail.html')
         else:
             instance.save()
-            client = MailChimp(mc_api=api, mc_user='suadolaps')
-            client.lists.members.create(list_id, {'email_address': instance.email, 'status': 'subscribed'}, merge_fields={'FNAME': instance.fname, 'LNAME': instance.lname})
+            # client = MailChimp(mc_api=api, mc_user='suadolaps')
+            # client.lists.members.create(list_id, {'email_address': instance.email, 'status': 'subscribed'}, merge_fields={'FNAME': instance.fname, 'LNAME': instance.lname})
 
     context = {
         'form': form,
