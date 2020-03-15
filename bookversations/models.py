@@ -14,7 +14,7 @@ class ReadingList(models.Model):
 class NewsletterUser(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100, blank=True)
-    email = models.EmailField()
+    email = models.EmailField(unique=True)
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

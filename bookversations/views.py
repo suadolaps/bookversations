@@ -1,6 +1,6 @@
 from django.conf import settings
-from django.http import HttpResponseRedirect
 from django.shortcuts import render
+
 from mailchimp3 import MailChimp
 from .models import ReadingList, NewsletterUser
 from .forms import NewsletterUserSignUpForm
@@ -14,23 +14,28 @@ def index(request):
     return render(request, 'bookversations/index.html', context)
 
 
+username = 'suadolaps'
+MAILCHIMP_API_KEY = settings.MAILCHIMP_API_KEY
+MAILCHIMP_LIST_ID = settings.MAILCHIMP_LIST_ID
+
+
 def newsletter_signup(request):
     form = NewsletterUserSignUpForm(request.POST or None)
-    api = settings.MAILCHIMP_API_KEY
-    list_id = settings.MAILCHIMP_EMAIL_LIST_ID
 
     if form.is_valid():
         instance = form.save(commit=False)
         if NewsletterUser.objects.filter(email=instance.email).exists():
-            return render(request, 'bookversations/existingmail.html')
+            return render(request, 'bookversations/existingmail.html', {'form': form})
         else:
             instance.save()
-            # client = MailChimp(mc_api=api, mc_user='suadolaps')
-            # client.lists.members.create(list_id, {'email_address': instance.email, 'status': 'subscribed'}, merge_fields={'FNAME': instance.fname, 'LNAME': instance.lname})
+            client = MailChimp(mc_api=MAILCHIMP_API_KEY, mc_user='suadolaps')
+            client.lists.members.create(MAILCHIMP_LIST_ID, {'email_address': instance.email, 'status': 'subscribed',
+                                                            'merge_fields': {'FNAME': instance.first_name, 'LNAME':
+                                                                instance.last_name}})
 
-    context = {
-        'form': form,
-    }
-    template = 'bookversations/success.html'
-    return render(request, template, context)
 
+    return render(request, 'bookversations/success.html', {'form': form})
+
+
+def failure_retry(request):
+    return render(request, 'bookversations/index.html')

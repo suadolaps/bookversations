@@ -15,7 +15,7 @@
         the developer.
       </p>
 
-      <form action="/failure" method="POST">
+      <form action="{% url 'bookversations:failure' %}" method="POST">
               {% csrf_token %}
         <button class="sign-up-button" type="submit" name="button">
           Try Again
