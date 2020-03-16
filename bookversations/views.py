@@ -33,7 +33,6 @@ def newsletter_signup(request):
                                                             'merge_fields': {'FNAME': instance.first_name, 'LNAME':
                                                                 instance.last_name}})
 
-
     return render(request, 'bookversations/success.html', {'form': form})
 
 

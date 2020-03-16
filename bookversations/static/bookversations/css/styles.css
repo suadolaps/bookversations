@@ -22,7 +22,7 @@ body {
   background-color: #f8f9fa;
 }
 
-.nav-bar a{
+.nav-bar a, .nav-bar a:visited {
   display: block;
   text-align: center;
   padding: 1.6rem;
@@ -50,9 +50,14 @@ font-size: 2.2rem;
   font-size: 1.6rem;
 }
 
-.menu-right a {
+.menu-right a, .menu-right a:visited {
   display: inline-block;
   color: #999999;
+}
+
+.menu-right a:hover {
+  display: inline-block;
+  color: #000000;
 }
 
 .main {
