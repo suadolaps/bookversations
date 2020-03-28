@@ -1,9 +1,7 @@
 from django.test import TestCase
 from django.urls import reverse
-from django.http import HttpRequest
 
-from ..models import ReadingList, NewsletterUser
-from ..views import newsletter_signup
+from ..models import ReadingList
 
 
 class ReadingListViewTest(TestCase):
@@ -21,15 +19,3 @@ class ReadingListViewTest(TestCase):
         self.assertTemplateUsed(response, 'bookversations/index.html')
 
 
-# class NewsletterUserTest(TestCase):
-#     @classmethod
-#     def setUpTestData(cls):
-#         NewsletterUser.objects.create(first_name="John", last_name="Smith", email="johnsmith@gmail.com", date_added="")
-#
-#     def test_data_save(self):
-#         # given (create request here)
-#         request = HttpRequest()
-#         request.body = "test"
-#         # when (call function here)
-#         newsletter_signup()
-#         # then (make sure john smith is in db here)
