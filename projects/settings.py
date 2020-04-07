@@ -14,7 +14,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', "2xmg-wy-jd*n@(yc!m!f#3vmp)gb#o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['bookversations.co', 'www.bookversations.co', '134.122.71.24']
+ALLOWED_HOSTS = ['bookversations.co', 'www.bookversations.co', '104.248.141.147', 'localhost']
 
 # Application definition
 
