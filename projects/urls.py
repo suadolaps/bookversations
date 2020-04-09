@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf import settings
-from django.urls import include, path
+from django.urls import include, path, re_path
 from django.conf.urls.static import static
 
 urlpatterns = [
+    re_path(r'^', include('bookversations.urls')),
     path('bookversations/', include('bookversations.urls')),
     path('admin/', admin.site.urls),
 ]
