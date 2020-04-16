@@ -19,8 +19,7 @@ from django.urls import include, path, re_path
 from django.conf.urls.static import static
 
 urlpatterns = [
-    re_path(r'^', include('bookversations.urls')),
-    path('bookversations/', include('bookversations.urls')),
+    path('', include('bookversations.urls')),
     path('admin/', admin.site.urls),
 ]
 
