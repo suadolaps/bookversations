@@ -7,7 +7,7 @@ class ReadingList(models.Model):
     book_image = models.ImageField(upload_to='images/book_covers/', null=True)
 
     def __str__(self):
-        return self.book_title, self.book_blurb
+        return self.book_title
 
 
 class NewsletterUser(models.Model):
@@ -17,4 +17,4 @@ class NewsletterUser(models.Model):
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.email, self.first_name, self.last_name
+        return self.email
