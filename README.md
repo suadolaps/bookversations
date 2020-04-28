@@ -1,8 +1,8 @@
-#Bookversations
+# Bookversations
 
 This is a landing page for the bookversations podcast with the latest episodes and our current reading list. In only a few steps you have this running on your local machine or deployed on a web server. 
 
-##Prerequisites
+## Prerequisites
 
 The requirements necessary to run the code on your machine are:
 
@@ -21,7 +21,7 @@ The requirements necessary to run the code on your machine are:
     - https://www.python.org/
     - https://brew.sh/
 
-##On Local Machine: Quick Start Guide
+## On Local Machine: Quick Start Guide
 
 1. Create a new empty folder on your computer
 
@@ -102,5 +102,5 @@ The requirements necessary to run the code on your machine are:
 
     `http://server_domain_or_IP:8000`
 
-##Deploy on a server: Quick Start Guide
+## Deploy on a server: Quick Start Guide
 
