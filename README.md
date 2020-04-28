@@ -10,11 +10,7 @@ The requirements necessary to run the code on your machine are:
 
   - Check that you have python3 installed on your computer with the command: 
 
-    ```
-    python --version
-    OR 
-    python3 --version
-    ```
+    `python --version` OR `python3 --version`
 
   - If you don’t have python3 installed, you may find these useful: 
 
@@ -26,14 +22,12 @@ The requirements necessary to run the code on your machine are:
 1. Create a new empty folder on your computer
 
 2. Navigate into the folder from the terminal and run: 
-
-   ```
-   # OVER HTTPS:
-   git clone https://github.com/suadolaps/bookversations.git
+   - Over HTTPS: 
+   `git clone https://github.com/suadolaps/bookversations.git`
    
-   # OVER SSH:
-   git clone ssh://git@github.com:suadolaps/bookversations.git
-   ```
+   - Over SSH:
+   `git clone ssh://git@github.com:suadolaps/bookversations.git`
+  
 
 3. Set up a virtual env in your directory:
 
