@@ -98,3 +98,10 @@ The requirements necessary to run the code on your machine are:
 
 ## Deploy on a server: Quick Start Guide
 
+1. Admin creates a username for you 
+
+2. Login to server (ubuntu):
+    `ssh username@ip-address`
+
+3. Pull project for latest changes:
+    `git pull origin master` 
