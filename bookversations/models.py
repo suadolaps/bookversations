@@ -9,6 +9,12 @@ class ReadingList(models.Model):
     def __str__(self):
         return self.book_title
 
+    @property
+    def book_image_url(self):
+        if self.book_image and hasattr(self.book_image, 'url'):
+            return self.book_image.url
+        return '#'
+
 
 class NewsletterUser(models.Model):
     first_name = models.CharField(max_length=100)
