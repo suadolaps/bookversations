@@ -1,4 +1,4 @@
-# Bookversations
+# [Bookversations](https://www.bookversations.co/)
 
 This is a landing page for the bookversations podcast with the latest episodes and our current reading list. In only a few steps you have this running on your local machine or deployed on a web server. 
 
